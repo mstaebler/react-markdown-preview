@@ -1,10 +1,11 @@
 var debug = process.env.NODE_ENV !== "production";
 var webpack = require('webpack');
+var path = require('path');
 
 module.exports = {
-  context: __dirname,
+  context: path.join(__dirname, "public"),
   devtool: debug ? "inline-sourcemap" : null,
-  entry: "./js/scripts.js",
+  entry: "../js/scripts.js",
   module: {
     loaders: [
       {
@@ -19,7 +20,7 @@ module.exports = {
     ]
   },
   output: {
-    path: __dirname + "/public",
+    path: __dirname + "/public/",
     filename: "scripts.min.js"
   },
   plugins: debug ? [] : [

@@ -2,6 +2,7 @@ import React from "react";
 
 import Footer from "./Footer";
 import Header from "./Header";
+import Textarea from "./Textarea";
 
 export default class Layout extends React.Component {
   constructor() {
@@ -18,8 +19,7 @@ export default class Layout extends React.Component {
   render() {
     return (
       <div>
-        <Header changeTitle={this.changeTitle.bind(this)} title={this.state.title} />
-        <Footer />
+        <Textarea />
       </div>
     );
   }
